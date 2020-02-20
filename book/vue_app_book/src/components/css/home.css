@@ -1,0 +1,47 @@
+.carousel-control-prev,
+.carousel-control-next{
+    width:4%;height:20%;
+    /* background-color: #b2b2b2; */
+    border-radius: 0.25rem;
+    top:40%;
+}
+.carousel-indicators li{
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #ffffff;
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
+    border-radius: 50%;
+}
+.carousel-indicators .active{
+    background-color: #00aeef;
+
+}
+.top_height{
+    height: 100px;
+}
+.img_position{
+
+    transition: 1s;
+
+}
+.img_position:hover{
+    transform: scale(1.1);
+}
+.ml-6{
+    margin-left: 5rem;
+}
+#nav_top{
+    background-color:  #e9ecef;
+  
+  }
+
+  .breadcrumb-item + .breadcrumb-item:before{
+    content: "|";
+  }
+.w-85{
+    width: 85%;
+}
+.bg_gray{
+    background-color:#867070;
+}

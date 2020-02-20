@@ -1,0 +1,29 @@
+.ml-6{
+  margin-left: 6rem;
+}
+.ml-13{
+  margin-left: 13rem;
+}
+.ml-18{
+  margin-left: 18rem;
+}
+.ml-24{
+  margin-left: 24rem;
+}
+.ml-29{
+  margin-left: 29rem;
+}
+.breadcrumb-item + .breadcrumb-item:before{
+  content: "|";
+}
+.pl-12{
+  padding-left:15rem;
+
+}
+
+.open+ul{
+  display: block;
+}
+p:hover{
+  cursor: pointer;
+}
