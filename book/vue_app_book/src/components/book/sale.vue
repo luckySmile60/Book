@@ -1,6 +1,6 @@
 <template>
-<div>
-     <!--首页头部-->
+  <div>
+    <!--首页头部-->
     <div class="container">
       <!--上半部分-->
       <div class="mt-1" id="nav_top">
@@ -43,7 +43,7 @@
     </div>
     <!-- 中间部分 -->
     <div class="container">
-      <div class="bigtext">
+      <!-- <div class="bigtext">
         <div>
           <img src="../../assets/img/taoshu-logo.jpg" alt="淘书网" />
         </div>
@@ -64,84 +64,89 @@
           </div>
           <div v-html="content" class="textbox" v-show="display"></div>
         </div>
+      </div> -->
+      <!-- 下半部分 -->
+      <ul class="nav bg_gray mt-1">
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/Home">首页</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/Readcard">阅读卡对换专区</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/Sale">特卖场</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/Taobook">淘书会</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/Group">团购批发</router-link>
+        </li>
+      </ul>
+      <div>
+        <img class="pic1" src="../../assets/img/yueduka.jpg" alt />
       </div>
-    <!-- 下半部分 -->
-    <ul class="nav bg_gray mt-1">
-        <li class="nav-item"><router-link class="nav-link text-white" to="/Home">首页</router-link></li>
-        <li class="nav-item"><router-link class="nav-link text-white" to="/Readcard">阅读卡对换专区</router-link></li>
-        <li class="nav-item"><router-link class="nav-link text-white" to="/Sale">特卖场</router-link></li>
-        <li class="nav-item"><router-link class="nav-link text-white" to="/Taobook">淘书会</router-link></li>
-        <li class="nav-item"><router-link class="nav-link text-white" to="/Group">团购批发</router-link></li>
-    </ul>
-    <div><img class="pic1" src="../../assets/img/yueduka.jpg" alt=""></div>
-</div>
- 
+    </div>
+
     <footer-component></footer-component>
-</div>
+  </div>
 </template>
 <script>
-    // 引入子组件
-    import footerComponent from "./footer.vue"
-    export default {
-    // 注册子组件
-    components:{
-        footerComponent
-    },
-     methods:{
-        jumpCart(event){
-            var url="findcart";
-            var pid=event.target.dataset.pid;
-            var obj={pid};
-            this.axios.get(url,{params:obj})
-            .then(res=>{
-                if(res.data.code==-1){
-                    alert("请登录!");
-                    this.$router.push("/Login")
-                }else{
-                      this.$router.push("/Cart");
-
-                 }
-            })
-
+// 引入子组件
+import footerComponent from "./footer.vue";
+export default {
+  // 注册子组件
+  components: {
+    footerComponent
+  },
+  methods: {
+    jumpCart(event) {
+      var url = "findcart";
+      var pid = event.target.dataset.pid;
+      var obj = { pid };
+      this.axios.get(url, { params: obj }).then(res => {
+        if (res.data.code == -1) {
+          alert("请登录!");
+          this.$router.push("/Login");
+        } else {
+          this.$router.push("/Cart");
         }
+      });
     }
-    
-}
+  }
+};
 </script>
 <style scoped>
-    @import  '../css/comm.css';
-    @import  '../css/home.css';
-     .container{
-           margin:0 auto;
-        }
-        .nav li>a{
-            margin-left:2rem;
-        }
-        .pic1{
-            width:100%;
-        }
-         .pict:hover{
-            background:#aaa;
-        }
-        .regt:hover{
-             background:#aaa;
-        }
-        .logt:hover{
-             background:#aaa;
-        }
-         #nav_top{
-            width:100%;
-            display: flex;
-            justify-content: space-between;
-        }
-        .bigtext{
-            width:100%;
-            display: flex;
-            justify-content: space-between;
-        }
-       
-   
-
+@import "../css/comm.css";
+@import "../css/home.css";
+.container {
+  margin: 0 auto;
+}
+.nav li > a {
+  margin-left: 2rem;
+}
+.pic1 {
+  width: 100%;
+}
+.pict:hover {
+  background: #aaa;
+}
+.regt:hover {
+  background: #aaa;
+}
+.logt:hover {
+  background: #aaa;
+}
+#nav_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.bigtext {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 </style>
 
 

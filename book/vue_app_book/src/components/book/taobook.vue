@@ -43,7 +43,7 @@
     </div>
     <!-- 中间部分 -->
     <div class="container">
-      <div class="bigtext">
+      <!-- <div class="bigtext">
         <div>
           <img src="../../assets/img/taoshu-logo.jpg" alt="淘书网" />
         </div>
@@ -64,7 +64,7 @@
           </div>
           <div v-html="content" class="textbox" v-show="display"></div>
         </div>
-      </div>
+      </div> -->
     <!-- 下半部分 -->
     <ul class="nav bg_gray mt-1">
         <li class="nav-item"><router-link class="nav-link text-white" to="/Home">首页</router-link></li>
